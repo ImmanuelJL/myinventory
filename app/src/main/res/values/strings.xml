@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">My Inventory</string>
+
+    <string-array name="navigation_drawer_items_array">
+        <item>Barang</item>
+        <item>Transaksi</item>
+        <item>User</item>
+    </string-array>
 </resources>

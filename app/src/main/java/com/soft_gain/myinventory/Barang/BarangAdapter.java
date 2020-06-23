@@ -2,10 +2,12 @@ package com.soft_gain.myinventory.Barang;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import com.soft_gain.myinventory.Barang.BarangFragmentList;
 import com.soft_gain.myinventory.Model.Barang.Datum;
 import com.soft_gain.myinventory.R;
 
@@ -15,13 +17,13 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.CustomView
     private List<Datum> dataList;
     private Context context;
 
-    public BarangAdapter(Context context,List<Datum> dataList){
-        this.context = context;
+    public BarangAdapter(List<Datum> dataList){
         this.dataList = dataList;
     }
 
-    class CustomViewHolder extends RecyclerView.ViewHolder {
+    public BarangAdapter(BarangFragmentList connectFragment, List<Datum> dataList) {}
 
+    class CustomViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         TextView txtTitle;
 
