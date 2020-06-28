@@ -1,0 +1,97 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height = "match_parent" tools:context = ".LoginActivity">
+
+    <TextView
+        android:text = "Form Barang"
+        android:layout_width="wrap_content"
+        android:layout_height = "wrap_content"
+        android:id = "@+id/textview"
+        android:textSize = "35dp"
+        android:layout_alignParentTop = "true"
+        android:layout_centerHorizontal = "true" />
+
+    <TextView
+        android:text = "Nama Barang"
+        android:layout_width="wrap_content"
+        android:layout_height = "wrap_content"
+        android:id = "@+id/lable_nama_barang"
+        android:textSize = "14dp"
+        android:layout_below="@+id/textview"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:background="@drawable/rounded_edittext"
+        android:layout_below="@+id/lable_nama_barang"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Isi Disini"
+        android:textColorHint="@color/cardview_shadow_start_color"
+        android:id = "@+id/nama_barang"
+        android:layout_centerHorizontal = "true" />
+
+    <TextView
+        android:text = "Jumlah Barang"
+        android:layout_width="wrap_content"
+        android:layout_height = "wrap_content"
+        android:id = "@+id/lable_jumlah_barang"
+        android:textSize = "14dp"
+        android:layout_below="@+id/nama_barang"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:background="@drawable/rounded_edittext"
+        android:layout_below="@+id/lable_jumlah_barang"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Isi Disini"
+        android:textColorHint="@color/cardview_shadow_start_color"
+        android:id = "@+id/jumlah_barang"
+        android:inputType = "number" />
+
+    <TextView
+        android:text = "Keterangan"
+        android:layout_width="wrap_content"
+        android:layout_height = "wrap_content"
+        android:id = "@+id/lable_keterangan"
+        android:textSize = "14dp"
+        android:layout_below="@+id/jumlah_barang"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="10dip"
+        android:background="@drawable/rounded_edittext"
+        android:layout_below="@+id/lable_keterangan"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Isi Disini"
+        android:textColorHint="@color/cardview_shadow_start_color"
+        android:id = "@+id/keterangan"
+        android:inputType = "text|textMultiLine" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/keterangan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Submit"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

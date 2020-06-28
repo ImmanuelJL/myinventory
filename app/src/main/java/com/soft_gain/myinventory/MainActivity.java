@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import com.soft_gain.myinventory.Barang.BarangFragmentFormAdd;
 import com.soft_gain.myinventory.Barang.BarangFragmentList;
 import com.soft_gain.myinventory.Model.SideMenu;
 
@@ -73,9 +74,21 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Fragment fragment = null;
         int id = item.getItemId();
+
         if (id == R.id.action_logout) {
             logout();
+            return true;
+        }else if (id == R.id.action_add) {
+            fragment = new BarangFragmentFormAdd();
+
+            if (fragment != null) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+            } else {
+                /*Log.e("log softgain : ", "Error in creating fragment");*/
+            }
             return true;
         }
 
@@ -126,9 +139,8 @@ public class MainActivity extends AppCompatActivity {
             mDrawerList.setSelection(position);
             setTitle(mNavigationDrawerItemTitles[position]);
             mDrawerLayout.closeDrawer(mDrawerList);
-
         } else {
-            Log.e("log softgain : ", "Error in creating fragment");
+            /*Log.e("log softgain : ", "Error in creating fragment");*/
         }
     }
 

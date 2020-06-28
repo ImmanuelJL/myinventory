@@ -20,6 +20,31 @@
             android:lines="2"
             android:text="title" />
 
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:paddingTop="20dp"
+            android:lines="2"
+            android:src="@drawable/ic_delete"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="55dp"
+            android:paddingTop="20dp"
+            android:lines="2"
+            android:src="@drawable/ic_edit"
+            android:layout_alignParentRight="true" />
+
+        <EditText
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:id = "@+id/id" />
+
     </RelativeLayout>
 
 </android.support.v7.widget.CardView>

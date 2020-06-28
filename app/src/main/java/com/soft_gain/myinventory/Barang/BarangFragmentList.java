@@ -1,5 +1,6 @@
 package com.soft_gain.myinventory.Barang;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -62,6 +65,14 @@ public class BarangFragmentList extends Fragment {
             }
         });
 
+        setHasOptionsMenu(true);
+
         return rootView;
+    }
+
+    @SuppressLint("ResourceType")
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.layout.top_menu_fragment_list, menu);
     }
 }

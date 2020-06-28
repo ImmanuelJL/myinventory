@@ -9,17 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.soft_gain.myinventory.Model.Auth.Login;
 import com.soft_gain.myinventory.Api.Client;
 import com.soft_gain.myinventory.Api.Interface;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginActivity extends Activity {
-    Button b1,b2;
+    Button b1;
     EditText ed1,ed2;
     Interface mApiInterface;
 
@@ -29,7 +27,6 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
 
         b1 = (Button)findViewById(R.id.button);
-        b2 = (Button)findViewById(R.id.button2);
         ed1 = (EditText)findViewById(R.id.editText);
         ed2 = (EditText)findViewById(R.id.editText2);
 
@@ -38,6 +35,9 @@ public class LoginActivity extends Activity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),
+                        "Mohon tunggu...",Toast.LENGTH_SHORT).show();
+
                 Call<Login> postLoginExe = mApiInterface.postLogin(ed1.getText().toString(), ed2.getText().toString());
                 postLoginExe.enqueue(new Callback<Login>() {
                     @Override
@@ -65,13 +65,6 @@ public class LoginActivity extends Activity {
                         Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
                     }
                 });
-            }
-        });
-
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
             }
         });
     }
